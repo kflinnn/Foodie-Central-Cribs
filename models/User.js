@@ -8,6 +8,8 @@ class User extends Model {
   }
 }
 
+
+//Needs id, username, password, email  - link user table to recipes
 User.init(
   {
     id: {
