@@ -23,7 +23,7 @@ Recipe.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
+    ingredients: {
       type: DataTypes.FLOAT,
       allowNull: false,
     },
@@ -40,7 +40,7 @@ Recipe.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'recipe',
   }
 );
 
