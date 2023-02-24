@@ -1,2 +1,6 @@
-DROP DATABASE IF EXISTS recipes_db;
-CREATE DATABASE recipes_db;
+DROP DATABASE IF EXISTS foodiecentral_db;
+CREATE DATABASE foodiecentral_db;
+
+USE foodiecentral_db;
+
+
