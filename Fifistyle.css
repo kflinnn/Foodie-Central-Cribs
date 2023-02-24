@@ -4,9 +4,10 @@ body {
     background-image: url(./img/Home.svg);
     background-repeat: no-repeat;
     background-size: 100vw,100vh;
+    background-color: #2c817b;
     font-family: "Vollkorn SC", serif;
     font-weight: 800;
-    color: #e4ded5;
+    color: #2c817b;
   }
   .container {
     width: 80%;
