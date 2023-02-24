@@ -24,7 +24,7 @@ Recipe.init(
       defaultValue: DataTypes.NOW,
     },
     ingredients: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     user_id: {

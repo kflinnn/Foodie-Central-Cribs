@@ -1,18 +1,20 @@
 [
   {
-    "name": "Music Nea",
-    "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-    "ingredients": 5000,
-    "instructions": "Instructions go here"
+    "name": "Peanut Butter and Jelly",
+    "description": "A simple, classic recipe that is good for any quick meal or snack. Makes one serving",
+    "ingredients": "2 Slices of Bread, Peanut Butter, Grape (or your flavor choice) Jelly or Jam",
+    "instructions": "1. Using a knife, spread your desired amount of peanut butter on one of the slices of bread 2. Do the same with the jelly/jam on the other slice of bread 3. Put the two slices together so that the peanut butter side is touching the jelly/jam side 4. Enjoy!"
   },
   {
-    "name": "The Ultimate Tech Quiz",
-    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-    "needed_funding": 10000
+    "name": "BLT",
+    "description": "A classic sandwich",
+    "ingredients": "2 slices of Bread, 4 Strips of Cooked Bacon, 1 tomato sliced,  ",
+    "instructions": "instructions here"
   },
   {
-    "name": "Roll 'Em Up",
+    "name": "Another recipe",
     "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-    "needed_funding": 800
+    "ingredients": "800",
+    "instructions": "instructions go here"
   }
 ]
