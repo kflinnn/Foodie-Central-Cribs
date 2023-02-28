@@ -20,7 +20,8 @@
     "login": "^0.8.0",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.20",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "validator": "^13.9.0"
   },
   "devDependencies": {
     "eslint": "^7.12.1",
