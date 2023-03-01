@@ -1,5 +1,6 @@
 [
   {
+    "id": "001",
     "title": "Peanut Butter and Jelly",
     "user_name": "kflinn",
     "description": "A simple, classic recipe that is good for any quick meal or snack. Makes one serving",
@@ -7,6 +8,7 @@
     "instructions": "1. Using a knife, spread your desired amount of peanut butter on one of the slices of bread 2. Do the same with the jelly/jam on the other slice of bread 3. Put the two slices together so that the peanut butter side is touching the jelly/jam side 4. Enjoy!"
   },
   {
+    "id": "002",
     "title": "BLT",
     "user_name": "kflinn",
     "description": "A classic sandwich",
@@ -14,6 +16,7 @@
     "instructions": "instructions here"
   },
   {
+    "id": "003",
     "title": "Another recipe",
     "user_name": "kflinn",
     "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",

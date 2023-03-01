@@ -1,15 +1,13 @@
 const router = require('express').Router();
-const { Recipe, User} = require('../../models');
+const { Recipe, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 let recipes = []
 
 //GET all recipes
 router.get('/recipes', async (req, res) => {
+  console.log("get recipes is running!");
   try {
-    const recipeData = await Recipe.findAll({
-      attributes: ['id', 'title', 'user_name', 'description', 'ingredients', 'instructions'],
-      include: [{model: User}],
-    });
+    const recipeData = await Recipe.findAll();
     res.status(200).json(recipeData);
   } catch (err) {
     res.status(500).json(err);
