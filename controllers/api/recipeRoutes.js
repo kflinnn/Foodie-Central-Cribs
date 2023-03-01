@@ -2,6 +2,21 @@ const router = require('express').Router();
 const { Recipe } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+//GET all recipes
+router.get('/,', async (req, res) => {
+  try {
+    const recipeData = await Recipe.findAll();
+    res.status(200).json(recipeData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//GET a single recipe
+
+
+
+// CREATE a recipe
 router.post('/', withAuth, async (req, res) => {
   try {
     const newRecipe = await Recipe.create({
@@ -15,6 +30,8 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+
+//DELETE a recipe
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.destroy({
