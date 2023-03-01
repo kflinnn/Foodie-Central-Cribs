@@ -80,3 +80,35 @@ body {
     width: 100%;
   }
   /* end nav bar style */
+  /* start of the login */
+  .centerboi{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 300px;
+    row-gap: 100px;
+    margin-top: 200px;
+
+  }
+  .login{
+flex: auto;
+max-width: fit-content;
+background-image: url(../img/better/lin.jpeg);
+padding: 10px;
+border:solid black 3px;
+border-radius: 10px;
+  }
+  .login h3{
+    text-align: center;
+  }
+  .signup{
+flex: auto;
+max-width: fit-content;
+background-image: url(../img/better/lin.jpeg);
+padding: 10px;
+border:solid black 3px;
+border-radius: 10px;
+  }
+  .signup h3{
+    text-align: center;
+  }
