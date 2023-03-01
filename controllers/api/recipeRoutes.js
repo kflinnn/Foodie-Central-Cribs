@@ -1,12 +1,15 @@
 const router = require('express').Router();
-const { Recipe } = require('../../models');
+const { Recipe, User} = require('../../models');
 const withAuth = require('../../utils/auth');
 let recipes = []
 
 //GET all recipes
-router.get('/,', async (req, res) => {
+router.get('/recipes', async (req, res) => {
   try {
-    const recipeData = await Recipe.findAll();
+    const recipeData = await Recipe.findAll({
+      attributes: ['id', 'title', 'user_name', 'description', 'ingredients', 'instructions'],
+      include: [{model: User}],
+    });
     res.status(200).json(recipeData);
   } catch (err) {
     res.status(500).json(err);
@@ -15,10 +18,18 @@ router.get('/,', async (req, res) => {
 
 //GET a single recipe
 
+router.get('/recipes/:id', async (req, res) => {
+  try {
+    const recipeData = await Recipe.findByPk(req.params.id);
+    res.status(200).json(recipeData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 // CREATE a recipe
-router.post('/', withAuth, async (req, res) => {
+router.post('/recipes', withAuth, async (req, res) => {
   try {
     const newRecipe = await Recipe.create({
       ...req.body,
@@ -33,7 +44,7 @@ router.post('/', withAuth, async (req, res) => {
 
 
 //DELETE a recipe
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/recipes/:id', withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.destroy({
       where: {
