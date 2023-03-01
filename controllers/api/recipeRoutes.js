@@ -14,6 +14,14 @@ router.get('/,', async (req, res) => {
 
 //GET a single recipe
 
+router.get('/:id', async (req, res) => {
+  try {
+    const recipeData = await Recipe.findByPk(req.params.id);
+    res.status(200).json(recipeData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 // CREATE a recipe
