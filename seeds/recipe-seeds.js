@@ -1,6 +1,6 @@
 const { Recipe } = require("../models");
 
-const recipeDatabase = [
+let recipeDatabase = [
     {
         title: "Peanut Butter and Jelly",
         user_name: "kflinn",
