@@ -11,7 +11,11 @@ Recipe.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    user_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -28,7 +32,7 @@ Recipe.init(
       allowNull: false,
     },
     instructions: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     user_id: {

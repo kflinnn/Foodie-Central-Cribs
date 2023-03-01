@@ -77,3 +77,14 @@ body {
     width: 100%;
   }
   /* end nav bar style */
+
+  /* Start of body style */
+.welcomebox{
+  display: flex;
+  justify-content: center;
+  color: ;
+}
+
+
+
+  /* End of body style */

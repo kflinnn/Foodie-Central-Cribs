@@ -1,42 +1,48 @@
-<div class="row">
-  <div class="col-md-6">
-    <h2>Login</h2>
+<header>
+            <div class="container">
+              <h1 class="logo">FoodieCentral Hub</h1>
+      
+              <nav>
+                <ul>
+                  <li><a href="#">Hub</a></li>
+                  <li><a href="#">FoodieCentral</a></li>
+                  <li><a href="#">FoodieCentral At Home</a></li>
+                  <li><i id= 'logout' class="fa fa-sign-in" aria-hidden="true"></i></li>
+                </ul>
+              </nav>
+            </div>
+</header>
+<div class="centerboi">
+        <div class="login">
+          <h3>Login!</h3>
+          <div>
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+          </div>
+      <br/>
+<div>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+        </div>
+          <button type="submit">Login</button>
+          <br/>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
 
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
-  </div>
-  <div class="col-md-6">
-    <h2>Signup</h2>
-
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
-  </div>
-</div>
-
-<script src="./js/login.js"></script>
+        </div>
+        <div class="signup">
+          <h3>Sign Up!</h3>
+          <div>
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+          </div>
+      <br/>
+      <div>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+        </div>
+          <button type="submit">SignUp</button>
+        </div>
+        </div>
+        <script src="" async defer></script>
