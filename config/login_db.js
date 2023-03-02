@@ -8,7 +8,7 @@ var dbConfig = {"name":"","options":{
     "port": 3100,
     "url": "",
     "database": "foodiecentral_db",
-    "password": "",
+    "password": "password",
     "user": "root",
     "connector": "mysql" // connector name ex. mongodb or mysql
 }};
