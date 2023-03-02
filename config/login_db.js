@@ -1,16 +1,18 @@
-var loopback = require("signup-login-module");
+let loopback = require("signup-login-module");
 
-var port = new loopback.port(3100);
+let port = new loopback.port(3100);
 
-var dbConfig = {"name":"","options":{
-    
-    "host": "",
-    "port": 3100,
-    "url": "",
-    "database": "foodiecentral_db",
-    "password": "password",
-    "user": "root",
-    "connector": "mysql" // connector name ex. mongodb or mysql
-}};
+let dbConfig = {
+    "name": "", "options": {
 
-var database = new loopback.datasource(dbConfig);
+        "host": "",
+        "port": 3100,
+        "url": "",
+        "database": process.env.DB_NAME,
+        "password": process.env.DB_PASSWORD,
+        "user": process.env.DB_USER,
+        "connector": "mysql" // connector name ex. mongodb or mysql
+    }
+};
+
+let database = new loopback.datasource(dbConfig);
