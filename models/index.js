@@ -11,3 +11,7 @@ Recipe.belongsTo(User, {
 });
 
 module.exports = { User, Recipe };
+
+// STARTS SIGNUP-LOGIN-MODULE
+var appStart = loopback.app;
+appStart.start();
