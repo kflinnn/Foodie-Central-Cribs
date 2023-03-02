@@ -1,13 +1,13 @@
 /* nav bar style*/
 body {
     margin: 0;
-    background-image: url(../img/Home.svg);
+    background-size: 100%;
     background-repeat: no-repeat;
-    background-size: 100vw,100vh;
     background-color: #2c817b;
     font-family: "Vollkorn SC", serif;
     font-weight: 800;
     color: #2c817b;
+    
   }
   .container {
     width: 80%;
@@ -16,10 +16,11 @@ body {
   }
   
   header {
-    /* background: #042142; */
     background-image: url(../img/better/2072521572419_8f6f8669-4da8-41d3-ac3e-72a5c10e2dd8.jpg);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    margin: auto;
+    padding: auto;
   }
   header::after {
     content: "";
@@ -80,35 +81,45 @@ body {
     width: 100%;
   }
   /* end nav bar style */
-  /* start of the login */
-  .centerboi{
+
+  /* recipy card start */
+.body-con{
+    padding: 2%;
+}
+
+.shelf-con{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.single-shelf{
+    width: 100%;
+}
+
+.recipe-card-con{
+    display: flex;
+    justify-content: space-around;
+}
+
+article{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    column-gap: 300px;
-    row-gap: 100px;
-    margin-top: 200px;
+}
 
-  }
-  .login{
-flex: auto;
-max-width: fit-content;
-background-image: url(../img/better/lin.jpeg);
-padding: 10px;
-border:solid black 3px;
-border-radius: 10px;
-  }
-  .login h3{
-    text-align: center;
-  }
-  .signup{
-flex: auto;
-max-width: fit-content;
-background-image: url(../img/better/lin.jpeg);
-padding: 10px;
-border:solid black 3px;
-border-radius: 10px;
-  }
-  .signup h3{
-    text-align: center;
-  }
+.recipe-card{
+    /* margin: 0 auto -5% auto; */
+    width: 70%;
+    position: relative;
+    top: 0;
+    left: 0;
+
+}
+
+.recipie-text{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    color:black;
+}
+  /* rec card end */
