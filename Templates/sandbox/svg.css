@@ -90,7 +90,6 @@ body {
 .shelf-con{
     display: flex;
     flex-direction: column-reverse;
-    
 }
 
 .single-shelf{
