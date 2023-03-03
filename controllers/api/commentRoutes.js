@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Recipe, User, Comment } = require('../../models');
+const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 let recipes = []
 
@@ -61,3 +61,5 @@ router.delete('/comments/:id', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+module.exports = router;

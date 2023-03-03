@@ -13,11 +13,9 @@ if (process.env.JAWSDB_URL) {
     {
       host: 'localhost',
       dialect: 'mysql',
-      port: 3100,
-      connector: 'mysql',
-      url: ""
+      port: 3306
     }
   );
 }
-var database = new loopback.datasource(sequelize)
+
 module.exports = sequelize;
