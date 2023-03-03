@@ -8,7 +8,6 @@ class User extends Model {
   }
 }
 
-
 //Needs id, username, password, email  - link user table to recipes
 User.init(
   {
@@ -56,5 +55,5 @@ User.init(
     modelName: 'user',
   }
 );
-
+var User = new loopback.model(User);
 module.exports = User;
