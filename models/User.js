@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
+const argon2 = require('argon2');
 const sequelize = require('../config/connection');
 
 class User extends Model {
@@ -55,5 +55,4 @@ User.init(
     modelName: 'user',
   }
 );
-var User = new loopback.model(User);
 module.exports = User;
