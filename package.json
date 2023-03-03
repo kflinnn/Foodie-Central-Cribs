@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "animate.css": "^4.1.1",
     "argon2": "^0.30.3",
     "connect-session-sequelize": "^7.0.4",
     "dotenv": "^8.2.0",
