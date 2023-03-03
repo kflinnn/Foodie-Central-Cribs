@@ -94,13 +94,18 @@ body {
 
 .single-shelf{
     width: 100%;
-    position: relative;
-    bottom: 8rem;
+
 }
 
 .recipe-card-con{
     display: flex;
     justify-content: space-around;
+    position: relative;
+    bottom: -4rem;
+}
+
+.recipe-card-card {
+  position: relative;
 }
 
 .recipe-card{
@@ -114,13 +119,13 @@ body {
 }
 
 .recipe-text{
-    position: relative;
+    position: absolute;
     text-align: center;
     overflow-wrap: break-word;
     z-index: 8;
     left: 8rem;
     color:black;
-    bottom: 16rem;
+    top: 4rem;
     max-width: 11rem;
 
 }
