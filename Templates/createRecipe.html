@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+#<!DOCTYPE html>
 
     <head>
         <meta charset="utf-8">
@@ -6,9 +6,10 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="../public/css/Fifistyle.css">
     </head>
     <body>
+      <header>
         <div class="container">
             <h1 class="logo">FoodieCentral Hub</h1>
     
@@ -21,6 +22,84 @@
               </ul>
             </nav>
           </div>
+        </header>
+<section>
+<div class="center">
+  <div class="reccontainer">
+    <form>
+      <input type="hidden" name="_captcha" value="false" />
+      <div class="row">
+        <div class="col-25">
+          <label for="name">Recipy Title</label>
+        </div>
+        <div class="col-75">
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="EX. My Yummy Dish"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="name">Username</label>
+        </div>
+        <div class="col-75">
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="EX.Robert Even"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Recipy Discription</label>
+        </div>
+        <div class="col-75">
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Your Last Name"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="Ingredients">Ingredients</label>
+        </div>
+        <div class="col-75">
+          <textarea
+            id="Ingredients"
+            name="Ingredients"
+            placeholder="EX. 1tbs salt, 1tps baking soda"
+            style="height: 200px"
+          ></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="Instructions">Instructions</label>
+        </div>
+        <div class="col-75">
+          <textarea
+            id="Instructions"
+            name="Instructions"
+            placeholder="Ex. Whip for 30 seconds on high"
+            style="height: 200px"
+          ></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+  </div>
+</div>
+        </section>
         <script src="" async defer></script>
     </body>
 </html>
