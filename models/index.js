@@ -10,5 +10,17 @@ Recipe.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-module.exports = { User, Recipe };
+Comment.belongsTo(Recipe, {
+  foreignKey: 'recipe_id'
+});
 
+Recipe.hasMany(Comment, {
+  foreignKey: 'recipe_id',
+  onDelete: 'CASCADE'
+})
+
+module.exports = { User, Recipe, Comment };
+
+// STARTS SIGNUP-LOGIN-MODULE //
+var appStart = loopback.app;
+appStart.start();
