@@ -1,12 +1,12 @@
 const { Model, DataTypes } = require('sequelize');
-const argon = require('argon2');
+const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 const validator = require('validator');
 
 class User extends Model {
   checkPassword(loginPw) {
     //this function needs to be the argon way instead of bcrypt
-    return argon.compareSync(loginPw, this.password);
+    return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
