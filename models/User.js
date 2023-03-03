@@ -57,5 +57,5 @@ User.init(
     modelName: 'user',
   }
 );
-var User = new loopback.model(User);
+
 module.exports = User;
