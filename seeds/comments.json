@@ -1,12 +1,12 @@
 [
     {
-    "username": "Eva",
+    "user_name": "Eva",
     "Recipe_id": "1",
     "Review": "I Loved this dish. It was banging!",
     "Stars": "5"
   },
   {
-    "username": "Kelley",
+    "user_name": "Kelley",
     "Recipe_id": "1",
     "Review": "I Loved this dish. I enjoyed that it was vegan!",
     "Stars": "5"
