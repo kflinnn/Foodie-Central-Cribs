@@ -1,5 +1,6 @@
 const User = require('./User');
 const Recipe = require('./Recipe');
+const Comment = require('./Comment')
 
 User.hasMany(Recipe, {
   foreignKey: 'user_id',
@@ -20,7 +21,3 @@ Recipe.hasMany(Comment, {
 })
 
 module.exports = { User, Recipe, Comment };
-
-// STARTS SIGNUP-LOGIN-MODULE //
-var appStart = loopback.app;
-appStart.start();
