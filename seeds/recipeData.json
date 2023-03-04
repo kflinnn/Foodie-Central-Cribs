@@ -13,14 +13,14 @@
     "user_name": "kflinn",
     "description": "A classic sandwich",
     "ingredients": "2 slices of Bread, 4 Strips of Cooked Bacon, 1 tomato sliced,  ",
-    "instructions": "instructions here"
+    "instructions": "1. Grab cooked bacon and put it in between both slices of bread 2. Do the same with the the sliced tomato 3. Put the two slices together enclosing the ingredients and add salt and pepper to taste 4. Enjoy!"
   },
   {
     "id": "003",
-    "title": "Another recipe",
+    "title": "Cooked ramen",
     "user_name": "kflinn",
-    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-    "ingredients": "800",
+    "description": "1. Grab a packet of Samyang ramen and cook it following the instructions on the packet. 2. Cut up vegetables and other ingredients (i use onions, tomatoes, spam, mushrooms, etc.) 3. Grab heavy whipping cream and put 1/2 a cup into the same pot as the ramen. 4. Put vegetables and any other desired ingredient into the pot. 5. Crack eggs into the pot of ramen and do not stir. 6. allow the eggs to hard boil freely without stirring 7. Enjoy! ",
+    "ingredients": "10",
     "instructions": "instructions go here"
   }
 ]
