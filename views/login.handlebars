@@ -14,37 +14,43 @@
 </header>
 {{!-- https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fopossum-gifs&psig=AOvVaw3OEf1j2EcuF1QaCuKMBpzT&ust=1677957722519000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCLj_y-K9wP0CFQAAAAAdAAAAABAE --}}
 <div class="centerboi">
+      <form class="form login-form">
+
         <div class="login">
           <h3>Login!</h3>
           <div>
           <label for="login-username"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" id="login-username" required>
+          <input type="text" placeholder="Enter Username" id="login-username"/>
           </div>
       <br/>
 <div>
           <label for="login-password"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password"  id="login-password" required>
+          <input type="password" placeholder="Enter Password"  id="login-password"/>
         </div>
           <button type="submit">Login</button>
           <br/>
           <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
+          <form>
 
         </div>
+    <form class="form signup-form">
+
         <div class="signup">
           <h3>Sign Up!</h3>
           <div>
           <label for="signup-username"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username"  id="signup-username" required>
+          <input type="text" placeholder="Enter Username"  id="signup-username" >
           </div>
       <br/>
       <div>
           <label for="signup-password"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" id="signup-password" required>
+          <input type="password" placeholder="Enter Password" id="signup-password" >
         </div>
-          <button type="submit">SignUp</button>
+          <button type="submit" class="signup-btn">SignUp</button>
         </div>
+        <form>
         </div>
         
         <script src="./js/login.js" ></script>
