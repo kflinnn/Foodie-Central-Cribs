@@ -28,10 +28,11 @@ router.get('/:id', async (req, res) => {
 
 // CREATE a recipe
 router.post('/', withAuth, async (req, res) => {
+  console.log("you've posted!");
   try {
     const newRecipe = await Recipe.create({
       ...req.body,
-      user_id: req.session.user_id,
+      user_id: req.session.user_id
     });
 
     res.status(200).json(newRecipe);
