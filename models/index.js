@@ -19,7 +19,7 @@ Recipe.hasMany(Comment, {
   onDelete: 'CASCADE'
 })
 
-module.exports = { User, Recipe, Comment };
+module.exports = { User, Recipe };
 
 // STARTS SIGNUP-LOGIN-MODULE //
 var appStart = loopback.app;
