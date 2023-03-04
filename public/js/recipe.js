@@ -2,11 +2,11 @@ const CreateRecipe = async (event) => {
     event.preventDefault();
   
     // Collect values from the login form
-    const title = document.querySelector('#').value.trim();
-    const userName = document.querySelector('#').value.trim();
-    const description = document.querySelector('#').value.trim();
-    const ingredients = document.querySelector('#').value.trim();
-    const instructions = document.querySelector('#').value.trim();
+    const title = document.querySelector('#title').value.trim();
+    const userName = document.querySelector('#username').value.trim();
+    const description = document.querySelector('#Discription').value.trim();
+    const ingredients = document.querySelector('#Ingredients').value.trim();
+    const instructions = document.querySelector('#Instructions').value.trim();
 
 
 
