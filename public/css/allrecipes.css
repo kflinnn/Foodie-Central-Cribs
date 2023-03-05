@@ -33,7 +33,10 @@ body {
     border: 10px;
     font-size: 25px;
     color: #CC5500;
+    animation: lightSpeedInRight; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
   }
+
   
   nav {
     float: right;
@@ -127,6 +130,7 @@ body {
     color:black;
     top: 4rem;
     max-width: 11rem;
-
+    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 5s; /* don't forget to set a duration! */
 }
   /* rec card end */

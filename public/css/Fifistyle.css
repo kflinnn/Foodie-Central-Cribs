@@ -7,7 +7,7 @@ body {
     background-color: #2c817b;
     font-family: "Vollkorn SC", serif;
     font-weight: 800;
-    color: #ffd393;
+    color: #CC5500;
   }
   .container {
     width: 80%;
@@ -31,8 +31,11 @@ body {
     border: 10px;
     font-size: 25px;
     color: #CC5500;
+    animation: lightSpeedInRight; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
   }
-  
+
+
   nav {
     float: right;
   }
@@ -90,23 +93,24 @@ body {
 
   }
   .login{
-flex: auto;
-max-width: fit-content;
-background-image: url(./img/better/lin.jpeg);
-padding: 10px;
-border:solid black 3px;
-border-radius: 10px;
+    flex: auto;
+    max-width: fit-content;
+    background-image: url(./img/better/lin.jpeg);
+    padding: 10px;
+    border:solid black 3px;
+    border-radius: 10px;
   }
   .login h3{
     text-align: center;
   }
+
   .signup{
-flex: auto;
-max-width: fit-content;
-background-image: url(./img/better/lin.jpeg);
-padding: 10px;
-border:solid black 3px;
-border-radius: 10px;
+    flex: auto;
+    max-width: fit-content;
+    background-image: url(./img/better/lin.jpeg);
+    padding: 10px;
+    border:solid black 3px;
+    border-radius: 10px;
   }
   .signup h3{
     text-align: center;
