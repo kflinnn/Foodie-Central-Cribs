@@ -8,7 +8,7 @@ class User extends Model {
   }
 }
 
-//Needs id, username, password, email  - link user table to recipes
+//Needs id, username, password  - link user table to recipes
 User.init(
   {
     id: {
@@ -18,12 +18,9 @@ User.init(
       autoIncrement: true,
     },
     user_name: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
-      unique: true,
-      validate: {
-        isUsername: true,
-      },
+      unique: true
     },
     // email: {
     //   type: DataTypes.STRING,

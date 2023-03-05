@@ -1,3 +1,17 @@
+<header>
+            <div class="container">
+              <h1 class="logo">FoodieCentral Hub</h1>
+      
+              <nav>
+                <ul>
+                  <li><a href="#">Hub</a></li>
+                  <li><a href="#">FoodieCentral</a></li>
+                  <li><a href="#">FoodieCentral At Home</a></li>
+                  <li><i id= 'logout' class="fa fa-sign-in" aria-hidden="true"></i></li>
+                </ul>
+              </nav>
+            </div>
+</header>
 <div class="row">
   <div class="col-auto">
     <h2>Welcome, {{name}}!</h2>
@@ -33,17 +47,17 @@
     </form>
   </div>
 
-  {{#if projects.length}}
+  {{#if recipe.length}}
   <div class="col-md-6 recipe-list">
     <h3>Current Recipes:</h3>
 
-    {{#each projects as |project|}}
+    {{#each recipe as |recipe|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+        <h4><a href="/project/{{recipe.id}}">{{recipe.name}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger" data-id="{{recipe.id}}">DELETE</button>
       </div>
     </div>
     {{/each}}
@@ -51,4 +65,4 @@
   {{/if}}
 </div>
 
-<script src="./js/profile.js"></script>
+<script src="../public/js/profile.js"></script>
