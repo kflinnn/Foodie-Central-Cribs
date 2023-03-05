@@ -1,11 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
-const validator = require('validator');
 
 class User extends Model {
   checkPassword(loginPw) {
-    //this function needs to be the argon way instead of bcrypt
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
@@ -19,18 +17,22 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    email: {
+    user_name: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
       validate: {
-        isEmail: true,
+        isUsername: true,
       },
     },
+    // email: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   unique: true,
+    //   validate: {
+    //     isEmail: true,
+    //   },
+    // },
     password: {
       type: DataTypes.STRING,
       allowNull: false,

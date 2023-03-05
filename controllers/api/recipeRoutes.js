@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth');
 let recipes = []
 
 //GET all recipes
-router.get('/recipes', async (req, res) => {
+router.get('/', async (req, res) => {
   console.log("get recipes is running!");
   try {
     const recipeData = await Recipe.findAll();
@@ -16,7 +16,7 @@ router.get('/recipes', async (req, res) => {
 
 //GET a single recipe
 
-router.get('/recipes/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const recipeData = await Recipe.findByPk(req.params.id);
     res.status(200).json(recipeData);
@@ -27,11 +27,12 @@ router.get('/recipes/:id', async (req, res) => {
 
 
 // CREATE a recipe
-router.post('/recipes', withAuth, async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
+  console.log("you've posted!");
   try {
     const newRecipe = await Recipe.create({
       ...req.body,
-      user_id: req.session.user_id,
+      user_id: req.session.user_id
     });
 
     res.status(200).json(newRecipe);
@@ -42,7 +43,7 @@ router.post('/recipes', withAuth, async (req, res) => {
 
 
 //DELETE a recipe
-router.delete('/recipes/:id', withAuth, async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.destroy({
       where: {
