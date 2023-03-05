@@ -1,10 +1,9 @@
       <header>
         <div class="container">
-          <h1 class="logo">FoodieCentral At Home</h1>
-  
+          <h1 class="logo">Foodie Central At Home</h1>
           <nav>
             <ul>
-              <li><a href="#">Master Kitchen</a></li>
+              <li><a href="#">Hub Home</a></li>
               <li><a href="#">Others Kitchens</a></li>
               <li><a href="#">My Kitchen</a></li>
               <li><i class="fa fa-sign-in" aria-hidden="true"></i></li>
@@ -13,13 +12,80 @@
         </div>
       </header>
 <section>
+  <header>
+            <div class="container">
+              <h1 class="logo">Foodie Central Hub</h1>
+      
+              <nav>
+                <ul>
+                  <li><a href="#">Hub</a></li>
+                  <li><a href="#">FoodieCentral</a></li>
+                  <li><a href="#">FoodieCentral At Home</a></li>
+                  <li><i id= 'logout' class="fa fa-sign-in" aria-hidden="true"></i></li>
+                </ul>
+              </nav>
+            </div>
+</header>
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Recipe:</h3>
+
+    <form class="form new-recipe-form">
+      <div class="form-group">
+        <label for="project-name">Recipe name:</label>
+        <input class="form-input" type="text" id="recipe-name" name="project-name" />
+      </div>
+            <div class="form-group">
+        <label for="project-desc">Description:</label>
+        <textarea class="form-input" id="recipe-desc" name="recipe-desc"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="project-funding">Ingredients:</label>
+        <input class="form-input" type="number" id="recipe-ingredients" name="project-funding" />
+      </div>
+            <div class="form-group">
+        <label for="project-funding">Instructions:</label>
+        <input class="form-input" type="number" id="recipe-instructions" name="project-funding" />
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if recipe.length}}
+  <div class="col-md-6 recipe-list">
+    <h3>Current Recipes:</h3>
+
+    {{#each recipe as |recipe|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{recipe.id}}">{{recipe.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{recipe.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
 <div class="center">
   <div class="reccontainer">
     <form>
       <input type="hidden" name="_captcha" value="false" />
       <div class="row">
         <div class="col-25">
-          <label for="name">Recipe Title</label>
+          <label for="name">Recipe Name:</label>
         </div>
         <div class="col-75">
           <input
@@ -32,7 +98,7 @@
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="name">Username</label>
+          <label for="name">Username:</label>
         </div>
         <div class="col-75">
           <input
@@ -45,21 +111,21 @@
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="Description">Recipe Description</label>
+          <label for="Description">Recipe Description:</label>
         </div>
         <div class="col-75">
           <input
             type="text"
             id="Description"
             name="Description"
-            placeholder="A brief description of your dish,serving size,prep time,and cook time"
+            placeholder="A brief description of your dish, serving size, prep time, and cook time"
             style="height: 100px;"
           />
         </div>
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="Ingredients">Ingredients</label>
+          <label for="Ingredients">Ingredients:</label>
         </div>
         <div class="col-75">
           <textarea
@@ -72,7 +138,7 @@
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="Instructions">Instructions</label>
+          <label for="Instructions">Instructions:</label>
         </div>
         <div class="col-75">
           <textarea
@@ -90,4 +156,4 @@
   </div>
 </div>
         </section>
-        <script src="./js/recipe.js"> </script>
+        <script src="../public/js/recipe.js"> </script>
