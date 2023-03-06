@@ -15,5 +15,25 @@
           {{>allrecipes-details}}
    
 
-  <script src="./js/recipe.js"></script>
+    <section class="body-con">
 
+        <section class="shelf-con"> 
+            <div><img class="single-shelf" src="../public/css/svgpics/Single-Shelf-Final.png"/></div>
+            {{#if recipes.length}}
+            <div class="recipe-card-con">
+              {{#each recipes as |recipe|}}
+                <div class="recipe-card-card"> 
+                  <img class="recipe-card" src="../public/css/svgpics/recipecardall.png">
+                  <div class="recipe-text">
+                    <h2>{{recipe.title}}</h2>
+                    <p>{{recipe.description}}</p>
+                  </div>
+                </div>
+                {{/each}}
+            </div>
+        </section>
+     
+    </section>
+
+  <script src="./js/recipe.js"></script>
+ 

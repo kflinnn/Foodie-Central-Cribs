@@ -28,6 +28,10 @@ const CreateRecipe = async (event) => {
     }
   };
   
+
+  //need to check to make sure that is the correct query selector for the button
   document
     .querySelector('.login-form')
-    .addEventListener('submit', CreateRecipe);
+    .addEventListener('click', CreateRecipe);
+
+    //Potentially need a function for a button for a user to save any recipe to their kitchen
