@@ -17,8 +17,10 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       // If successful, redirect the browser to the profile page
       document.location.replace('/profile');
+      visibilitySwitchOff();
     } else {
       alert(response.statusText);
+      visibilitySwitchOn();
     }
   }
 };
@@ -51,3 +53,13 @@ document
 document
   .querySelector('#signup-btn')
   .addEventListener('click', signupFormHandler);
+
+function visibilitySwitchOff() {
+  document.getElementById("logout").style.visibility = "hidden";
+  document.getElementById("titleName").style.visibility = "visible";
+}
+
+function visibilitySwitchOn() {
+  document.getElementById("logout").style.visibility = "visible";
+  document.getElementById("titleName").style.visibility = "hidden";
+}

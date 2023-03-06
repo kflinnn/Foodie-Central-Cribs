@@ -1,66 +1,65 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../public/css/allrecipes.css">
-        <link rel="stylesheet" href="../public/css/font-awesome-4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />        
-    </head>
-    <body>
-      <header>
-        <div class="container">
-          <h1 class="logo">FoodieCentral At Home</h1>
-  
-          <nav>
-            <ul>
-              <li><a href="#">Master Kitchen</a></li>
-              <li><a href="#">Others Kitchens</a></li>
-              <li><a href="#">My Kitchen</a></li>
-              <li><i class="fa fa-sign-in" aria-hidden="true"></i></li>
-            </ul>
-          </nav>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../public/css/allrecipes.css">
+  <link rel="stylesheet" href="../public/css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo hidden">FoodieCentral At Home</h1>
+
+      <nav>
+        <ul>
+          <li><a href="#">Master Kitchen</a></li>
+          <li><a href="#">Others Kitchens</a></li>
+          <li><a href="#">My Kitchen</a></li>
+          <li><i class="fa logout fa-sign-in" aria-hidden="true"></i></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="body-con">
+
+    <div class="shelf-con">
+      <div><img class="single-shelf" src="../public/css/svgpics/Single-Shelf-Final.png" /></div>
+
+      <div class="recipe-card-con">
+
+        <div class="recipe-card-card">
+          <img class="recipe-card" src="../public/css/svgpics/recipecardall.png">
+          <div class="recipe-text">
+          </div>
         </div>
-      </header>
 
+        <div class="recipe-card-card">
+          <img class="recipe-card" src="../public/css/svgpics/recipecardall.png">
+          <div class="recipe-text">
 
-    <section class="body-con">
+          </div>
+        </div>
 
-        <section class="shelf-con"> 
-            <div><img class="single-shelf" src="../public/css/svgpics/Single-Shelf-Final.png"/></div>
+        <div class="recipe-card-card">
+          <img class="recipe-card" src="../public/css/svgpics/recipecardall.png">
+          <div class="recipe-text">
 
-            <div class="recipe-card-con">
+          </div>
+        </div>
+      </div>
+  </section>
 
-                <div class="recipe-card-card"> 
-                  <img class="recipe-card" src="../public/css/svgpics/recipecardall.png">
-                  <div class="recipe-text">
+  <script src="" async defer></script>
+</body>
 
-                  </div>
-                </div>
-              
-                <div class="recipe-card-card"> 
-                  <img class="recipe-card" src="../public/css/svgpics/recipecardall.png">
-                  <div class="recipe-text">
-
-                  </div>
-                </div>
-
-                <div class="recipe-card-card"> 
-                  <img class="recipe-card" src="../public/css/svgpics/recipecardall.png">
-                  <div class="recipe-text">
-                      
-                  </div>
-                </div>
-            </div>
-        </section>
-
-        <section>{{> allrecipes-part}}</section>
-    </section>
-
-        <script src="" async defer></script>
-    </body>
 </html>

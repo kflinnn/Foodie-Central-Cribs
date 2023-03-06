@@ -1,42 +1,67 @@
 /* nav bar style*/
-body {
-    margin: 0;
-    background-image: url(./img/Home.svg);
-    background-repeat: no-repeat;
-    background-size: 100vw,100vh;
-    background-color: #2c817b;
-    font-family: "Vollkorn SC", serif;
-    font-weight: 800;
-    color: #CC5500;
-  }
+  body {
+      margin: 0;
+      background-image: url(./img/Home.svg);
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-size: 100vw,100vh;
+      background-color: #2c817b;
+      font-family: "Vollkorn SC", serif;
+      font-weight: 800;
+      color: #ea6c0c;
+    }
   .container {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     font-family: "Comfortaa", cursive;
   }
   header {
     /* background: #042142; */
-    background-image: url(./img/better/lin.jpeg);
+    /* background-image: url(./img/better/lin.jpeg); */
+    background-color: #a8ccbc;
+    padding-bottom: 0.5rem;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    margin: auto;
+    padding: auto;
   }
   header::after {
     content: "";
     display: table;
     clear: both;
   }
+  .right {
+    align-self: right;
+  }
   
+  #profile-header {
+    /* background: #042142; */
+    background-image: url(./img/better/lin2.jpg);
+    padding-bottom: 1rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  #profile-header::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
   .logo {
     float: left;
+    text-align: left;
     border: 10px;
     font-size: 25px;
-    color: #CC5500;
+    color: #ff9e42;
     animation: lightSpeedInRight; /* referring directly to the animation's @keyframe declaration */
     animation-duration: 2s; /* don't forget to set a duration! */
   }
-  
+  .titleHeader {
+    text-align: left;
+  }
   nav {
     float: right;
+    width: 100%;
   }
   
   nav ul {
@@ -49,12 +74,12 @@ body {
     display: inline-block;
     margin-left: 70px;
     padding-top: 23px;
-  
-    position: relative;
+    position: absolute;
+    width: auto;
   }
   
   nav a {
-    color: #CC5500;
+    color: #ea6c0c;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
@@ -91,10 +116,14 @@ body {
     margin-top: 200px;
 
   }
+
+  .hidden{
+    visibility: hidden;
+  }
   .login{
 flex: auto;
 max-width: fit-content;
-background-image: url(./img/better/lin.jpeg);
+background-image: url(./img/better/lin.jpg);
 padding: 10px;
 border:solid black 3px;
 border-radius: 10px;
@@ -105,7 +134,7 @@ border-radius: 10px;
   .signup{
 flex: auto;
 max-width: fit-content;
-background-image: url(./img/better/lin.jpeg);
+background-image: url(./img/better/lin.jpg);
 padding: 10px;
 border:solid black 3px;
 border-radius: 10px;
