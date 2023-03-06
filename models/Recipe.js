@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Recipe extends Model {}
+class Recipe extends Model { }
 
 Recipe.init(
   {
@@ -12,10 +12,6 @@ Recipe.init(
       autoIncrement: true,
     },
     title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    user_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },

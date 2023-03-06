@@ -13,9 +13,11 @@ const seedDatabase = async () => {
   });
 
   for (const recipe of recipeData) {
+    const user = await User.findOne({ where: { user_name: recipe.user_name } })
+    delete recipe.user_name;
     await Recipe.create({
       ...recipe,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
+      user_id: user.id,
     });
   }
 

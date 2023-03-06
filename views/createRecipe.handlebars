@@ -1,7 +1,6 @@
 
-<header>
+<div>
   <div class='container'>
-    <h1 class='logo'>Foodie Central At Home</h1>
     <nav>
       <ul>
         <li><a href='#'>Hub Home</a></li>
@@ -11,15 +10,13 @@
       </ul>
     </nav>
   </div>
-</header>
+</div>
 <section>
-  <header>
-    <div class='container'>
-      <h1 class='logo'>Foodie Central Hub</h1>
-
+</br>
+<div id="recipe-container-main">
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2>Welcome, {{user_name}}!</h2>
   </div>
 </div>
 
@@ -51,11 +48,7 @@
       </div>
     </form>
   </div>
+</div>
 
-  {{#if recipe.length}}
-  <div class="col-md-6 recipe-list">
-    <h3>Current Recipes:</h3>
-  </div>
-</section>
 <script src='/js/recipe.js'> </script>
 
