@@ -2,11 +2,12 @@ const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
-  const user_name = document.getElementById("username-login").value.trim();
+  const username = document.getElementById("username-login").value.trim();
   const password = document.getElementById("password-login").value.trim();
-console.log(user_name);
-console.log(password);
-  if (user_name && password) {
+  console.log(username);
+  console.log(password);
+  if (username && password) {
+
     // Send a POST request to the API endpoint
     const response = await fetch('/api/users/login', {
       method: 'POST',
@@ -17,8 +18,10 @@ console.log(password);
     if (response.ok) {
       // If successful, redirect the browser to the profile page
       document.location.replace('/profile');
+      visibilitySwitchOff();
     } else {
-      alert(await response.text());
+      alert(response.statusText);
+      visibilitySwitchOn();
     }
   }
 };
@@ -51,3 +54,13 @@ document
 document
   .querySelector('#signup-btn')
   .addEventListener('click', signupFormHandler);
+
+function visibilitySwitchOff() {
+  document.getElementById("logout").style.visibility = "hidden";
+  document.getElementById("titleName").style.visibility = "visible";
+}
+
+function visibilitySwitchOn() {
+  document.getElementById("logout").style.visibility = "visible";
+  document.getElementById("titleName").style.visibility = "hidden";
+}

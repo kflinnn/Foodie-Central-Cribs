@@ -1,18 +1,30 @@
-<section>
-    <div class="centerboi">
-  <div class="recipe" id="recipe">
-<!-- box? -->
-<h1 id="rTitle">{{title}}</h1>
-<h3 id="rUser">From the Kitchen of {{user_name}}</h3>
-<p id="rIng">Ingredients: {{ingredients}}</p>
-<i id="rInst">Instructions: {{instructions}}</i>
-  </div>
 
-  {{!-- Button for user to save this recipe to their recipe box, future development? --}}
-  {{!-- <p>
-    <button class="btn btn-primary">Save This Recipe to your Kitchen!</button>
-  </p> --}}
-</div>
-</section>
+<body>
+  <header>
+    <div class='container'>
+      <h1 class='logo'>FoodieCentral At Home</h1>
 
-<script src="./js/recipe.js"></script>
+      <nav>
+        <ul>
+          <li><a href='#'>Master Kitchen</a></li>
+          <li><a href='#'>Others Kitchens</a></li>
+          <li><a href='#'>My Kitchen</a></li>
+          <li><i id='logout' class='fa fa-sign-in' aria-hidden='true'></i></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section>
+    <div class='centerboi'>
+      <div class='recipe' id='recipe'>
+        <!-- box? -->
+        <h1 id='rTitle'>{{title}}</h1>
+        <h3 id='rUser'>{{user_name}}</h3>
+        <p id='rIng'>{{ingredients}}</p>
+        <i id='rInst'>{{instructions}}</i>
+      </div>
+    </div>
+  </section>
+</body>
+<script src='./js/recipe.js'></script>
+

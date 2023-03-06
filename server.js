@@ -30,11 +30,13 @@ const sess = {
 };
 
 app.use(session(sess));
-
+console.log(exphbs);
 // Inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);
+
 //This is the partials path to have the more shelves generate
 // partialDir: path.join(__dirname, 'views/partials')
+
 app.set('view engine', 'handlebars');
 
 app.use(express.json());

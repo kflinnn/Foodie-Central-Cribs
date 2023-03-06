@@ -1,4 +1,22 @@
 
+<header>
+  <div class='container'>
+    <h1 class='logo'>Foodie Central At Home</h1>
+    <nav>
+      <ul>
+        <li><a href='#'>Hub Home</a></li>
+        <li><a href='#'>Others Kitchens</a></li>
+        <li><a href='#'>My Kitchen</a></li>
+        <li><i id='logout' class='fa fa-sign-in' aria-hidden='true'></i></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section>
+  <header>
+    <div class='container'>
+      <h1 class='logo'>Foodie Central Hub</h1>
+
 <div class="row">
   <div class="col-auto">
     <h2>Welcome, {{name}}!</h2>
@@ -37,96 +55,7 @@
   {{#if recipe.length}}
   <div class="col-md-6 recipe-list">
     <h3>Current Recipes:</h3>
-
-    {{#each recipe as |recipe|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{recipe.id}}">{{recipe.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{recipe.id}}">DELETE</button>
-      </div>
-    </div>
-    {{/each}}
   </div>
-  {{/if}}
-</div>
+</section>
+<script src='/js/recipe.js'> </script>
 
-<div class="center">
-  <div class="reccontainer">
-    <form>
-      <input type="hidden" name="_captcha" value="false" />
-      <div class="row">
-        <div class="col-25">
-          <label for="name">Recipe Name:</label>
-        </div>
-        <div class="col-75">
-          <input
-            type="text"
-            id="title"
-            name="title"
-            placeholder="EX. My Yummy Dish"
-          />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="name">Username:</label>
-        </div>
-        <div class="col-75">
-          <input
-            type="text"
-            id="username"
-            name="username"
-            placeholder="EX.Robert Even"
-          />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="Description">Recipe Description:</label>
-        </div>
-        <div class="col-75">
-          <input
-            type="text"
-            id="Description"
-            name="Description"
-            placeholder="A brief description of your dish, serving size, prep time, and cook time"
-            style="height: 100px;"
-          />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="Ingredients">Ingredients:</label>
-        </div>
-        <div class="col-75">
-          <textarea
-            id="Ingredients"
-            name="Ingredients"
-            placeholder="EX. 1tbs salt, 1tps baking soda"
-            style="height: 200px"
-          ></textarea>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="Instructions">Instructions:</label>
-        </div>
-        <div class="col-75">
-          <textarea
-            id="Instructions"
-            name="Instructions"
-            placeholder="Ex. Whip for 30 seconds on high"
-            style="height: 200px"
-          ></textarea>
-        </div>
-      </div>
-      <div class="row">
-        <input type="submit" value="Submit" />
-      </div>
-    </form>
-  </div>
-</div>
-        </section>
-        <script src="./js/recipe.js"> </script>
