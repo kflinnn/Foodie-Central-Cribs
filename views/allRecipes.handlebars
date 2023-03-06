@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,7 +33,7 @@
             <div><img class="single-shelf" src="../public/css/svgpics/Single-Shelf-Final.png"/></div>
             {{#if recipes.length}}
             <div class="recipe-card-con">
-              {{#each recipes as |recipe}}
+              {{#each recipes as |recipe|}}
                 <div class="recipe-card-card"> 
                   <img class="recipe-card" src="../public/css/svgpics/recipecardall.png">
                   <div class="recipe-text">
@@ -48,9 +48,8 @@
         {{!-- <section>{{> allrecipes-part}}</section> --}}
     </section>
 
-        <script src="" async defer></script>
-    </body>
+        {{!-- <script src="" async defer></script> --}}
+   
 
   <script src="./js/recipe.js"></script>
 
-</html>

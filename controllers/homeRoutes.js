@@ -3,6 +3,10 @@ const { Recipe, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
+  res.render('login');
+});
+
+router.get('/api/recipes/', async (req, res) => {
   try {
     // Get all recipes and JOIN with user data
     const recipeData = await Recipe.findAll({
@@ -13,7 +17,6 @@ router.get('/', async (req, res) => {
         },
       ],
     });
-
 
 
     // Serialize data so the template can read it
