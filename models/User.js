@@ -4,6 +4,8 @@ const sequelize = require('../config/connection');
 
 class User extends Model {
   checkPassword(loginPw) {
+    console.log("THIS IS THE VALUE OF THIS.PASSWORD:", this.password);
+    console.log("THIS IS THE VALUE OF LOGINPW:", loginPw);
     return bcrypt.compareSync(loginPw, this.password);
   }
 }

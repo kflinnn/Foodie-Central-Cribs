@@ -1,20 +1,7 @@
-<!DOCTYPE html>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../public/css/allrecipes.css">
-        <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
       <header>
         <div class="container">
-          <h1 class="logo">FoodieCentral At Home</h1>
-  
+
           <nav>
             <ul>
               <li><a href="#">Hub Home</a></li>
@@ -22,6 +9,8 @@
               <li><a href="#">My Kitchen</a></li>
               <li><i class="fa fa-sign-in" aria-hidden="true"></i></li>
             </ul>
+          <h1 class="logo">FoodieCentral At Home</h1>
+  
           </nav>
         </div>
       </header>
@@ -30,27 +19,23 @@
     <section class="body-con">
 
         <section class="shelf-con"> 
-            <div><img class="single-shelf" src="../public/css/svgpics/Single-Shelf-Final.png"/></div>
+
             {{#if recipes.length}}
             <div class="recipe-card-con">
-              {{#each recipes as |recipe}}
+              {{#each recipes as |recipe|}}
                 <div class="recipe-card-card"> 
-                  <img class="recipe-card" src="../public/css/svgpics/recipecardall.png">
+                  <img class="recipe-card" src="/css/svgpics/recipecardall.png">
                   <div class="recipe-text">
                     <h2>{{title}}</h2>
                     <p>{{description}}</p>
                   </div>
                 </div>
                 {{/each}}
+            <div><img class="single-shelf" src="/css/svgpics/Single-Shelf-Final.png"/></div>
             </div>
+            {{/if}}
         </section>
         {{!-- This is the implemention of the new shelf being generated --}}
         {{!-- <section>{{> allrecipes-part}}</section> --}}
     </section>
-
-        <script src="" async defer></script>
-    </body>
-
   <script src="./js/recipe.js"></script>
-
-</html>
