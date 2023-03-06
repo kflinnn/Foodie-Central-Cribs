@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Recipe extends Model {}
+class Recipe extends Model { }
 
 Recipe.init(
   {
@@ -12,10 +12,6 @@ Recipe.init(
       autoIncrement: true,
     },
     title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    user_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -37,6 +33,7 @@ Recipe.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'user',
         key: 'id',
@@ -44,11 +41,21 @@ Recipe.init(
     },
   },
   {
+    hooks: {
+      beforeCreate: async (userid) => {
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      },
+      beforeUpdate: async (updatedUserData) => {
+        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        return updatedUserData;
+      },
+    },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'recipe',
+    modelName: 'user',
   }
 );
 

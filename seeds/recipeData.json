@@ -2,7 +2,7 @@
   {
     "id": "001",
     "title": "Peanut Butter and Jelly",
-    "user_name": "kflinn",
+    "user_name": "Geckogiggles",
     "description": "A simple, classic recipe that is good for any quick meal or snack. Makes one serving",
     "ingredients": "2 Slices of Bread, Peanut Butter, Grape (or your flavor choice) Jelly or Jam",
     "instructions": "1. Using a knife, spread your desired amount of peanut butter on one of the slices of bread 2. Do the same with the jelly/jam on the other slice of bread 3. Put the two slices together so that the peanut butter side is touching the jelly/jam side 4. Enjoy!"
@@ -10,7 +10,7 @@
   {
     "id": "002",
     "title": "BLT",
-    "user_name": "kflinn",
+    "user_name": "Sal",
     "description": "A classic sandwich",
     "ingredients": "2 slices of Bread, 4 Strips of Cooked Bacon, 1 tomato sliced,  ",
     "instructions": "1. Grab cooked bacon and put it in between both slices of bread 2. Do the same with the the sliced tomato 3. Put the two slices together enclosing the ingredients and add salt and pepper to taste 4. Enjoy!"
@@ -18,9 +18,9 @@
   {
     "id": "003",
     "title": "Cooked ramen",
-    "user_name": "kflinn",
-    "description": "1. Grab a packet of Samyang ramen and cook it following the instructions on the packet. 2. Cut up vegetables and other ingredients (i use onions, tomatoes, spam, mushrooms, etc.) 3. Grab heavy whipping cream and put 1/2 a cup into the same pot as the ramen. 4. Put vegetables and any other desired ingredient into the pot. 5. Crack eggs into the pot of ramen and do not stir. 6. allow the eggs to hard boil freely without stirring 7. Enjoy! ",
+    "user_name": "ricardo",
+    "description":"Yummy ramen. Good food" ,
     "ingredients": "10",
-    "instructions": "instructions go here"
+    "instructions": "1. Grab a packet of Samyang ramen and cook it following the instructions on the packet. 2. Cut up vegetables and other ingredients (i use onions, tomatoes, spam, mushrooms, etc.) 3. Grab heavy whipping cream and put 1/2 a cup into the same pot as the ramen. 4. Put vegetables and any other desired ingredient into the pot. 5. Crack eggs into the pot of ramen and do not stir. 6. allow the eggs to hard boil freely without stirring 7. Enjoy! "
   }
 ]
