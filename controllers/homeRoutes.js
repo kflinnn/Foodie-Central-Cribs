@@ -3,6 +3,10 @@ const { Recipe, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
+  res.render('login');
+});
+
+router.get('/api/recipes/', async (req, res) => {
   try {
     // Get all recipes and JOIN with user data
     const recipeData = await Recipe.findAll({
@@ -14,11 +18,34 @@ router.get('/', async (req, res) => {
       ],
     });
 
+
     // Serialize data so the template can read it
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', {
+    res.render('allRecipes', {
+      recipes,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+  // Get all user's saved recipes and JOIN with user data
+router.get('/user/:id', async (req, res) => {
+  try {
+      const recipeData = await Recipe.findOne({
+      where: {
+        user_id: req.params.id
+      }
+    });
+
+        // Serialize data so the template can read it
+    const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('profile', {
       recipes,
       logged_in: req.session.logged_in
     });
@@ -77,7 +104,6 @@ router.get('/login', (req, res) => {
     res.redirect('/profile');
     return;
   }
-
   res.render('login');
 });
 

@@ -1,17 +1,17 @@
-<header>
+{{!-- <header>
             <div class="container">
               <h1 class="logo">FoodieCentral Hub</h1>
       
               <nav>
                 <ul>
                   <li><a href="#">Hub</a></li>
-                  <li><a href="#">FoodieCentral</a></li>
+                  <li><a id="project1" href="#">FoodieCentral</a></li>
                   <li><a href="#">FoodieCentral At Home</a></li>
                   <li><i id= 'logout' class="fa fa-sign-in" aria-hidden="true"></i></li>
                 </ul>
               </nav>
             </div>
-</header>
+</header> --}}
 {{!-- https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fopossum-gifs&psig=AOvVaw3OEf1j2EcuF1QaCuKMBpzT&ust=1677957722519000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCLj_y-K9wP0CFQAAAAAdAAAAABAE --}}
 <div class="centerboi">
       <form class="form login-form">
@@ -19,20 +19,20 @@
         <div class="login">
           <h3>Login!</h3>
           <div>
-          <label for="login-username"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" id="login-username"/>
+          <label for="username-login"><b>Username</b></label>
+          <input type="text" name="name" placeholder="Enter Username" id="username-login"/>
           </div>
       <br/>
 <div>
-          <label for="login-password"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password"  id="login-password"/>
+          <label for="password-login"><b>Password</b></label>
+          <input type="password" name="name" placeholder="Enter Password"  id="password-login"/>
         </div>
-          <button type="submit">Login</button>
+          <button type="submit" id="login-btn">Login</button>
           <br/>
           <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
-          <form>
+          </form>
 
         </div>
     <form class="form signup-form">
@@ -41,16 +41,17 @@
           <h3>Sign Up!</h3>
           <div>
           <label for="signup-username"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username"  id="signup-username" >
+          <input type="text" placeholder="Enter Username"  id="signup-username-input" >
           </div>
       <br/>
       <div>
           <label for="signup-password"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" id="signup-password" >
+          <input type="password" placeholder="Enter Password" id="signup-password-input" >
         </div>
-          <button type="submit" class="signup-btn">SignUp</button>
+          <button type="submit" id="signup-btn">SignUp</button>
         </div>
-        <form>
+        </form>
         </div>
+        <form action=""></form>
         
         <script src="./js/login.js" ></script>

@@ -8,7 +8,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../public/css/allrecipes.css">
-        <link rel="stylesheet" href="../public/css/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     </head>
     <body>
       <header>
@@ -17,7 +18,7 @@
   
           <nav>
             <ul>
-              <li><a href="#">Master Kitchen</a></li>
+              <li><a href="#">Hub Home</a></li>
               <li><a href="#">Others Kitchens</a></li>
               <li><a href="#">My Kitchen</a></li>
               <li><i class="fa fa-sign-in" aria-hidden="true"></i></li>
@@ -30,36 +31,30 @@
     <section class="body-con">
 
         <section class="shelf-con"> 
-            <div><img class="single-shelf" src="../svgpics/Single-Shelf-Final.png"/></div>
-
+            <div><img class="single-shelf" src="../public/css/svgpics/Single-Shelf-Final.png"/></div>
+            {{#if recipes.length}}
             <div class="recipe-card-con">
-
+              {{#each recipes as |recipe}}
                 <div class="recipe-card-card"> 
-                  <img class="recipe-card" src="../svgpics/recipecardall.png">
+                  <img class="recipe-card" src="../public/css/svgpics/recipecardall.png">
                   <div class="recipe-text">
-                      sjvnsnvshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhvjhvjdndgbndbdbdfbdfbdhsfbdgnfgnsndfnnnsdddddddddddddddddddddddddddddddddddddddddd
+                    <h2>{{title}}</h2>
+                    <h3>{{user_name}}</h3>
+                    <p>{{description}}</p>
+                    <p>{{ingredients}}</p>
+                    <p>{{instructions}}</p>
                   </div>
                 </div>
-              
-                <div class="recipe-card-card"> 
-                  <img class="recipe-card" src="../svgpics/recipecardall.png">
-                  <div class="recipe-text">
-                      sjvnsnvshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhvjhvjdndgbndbdbdfbdfbdhsfbdgnfgnsndfnnnsdddddddddddddddddddddddddddddddddddddddddd
-                  </div>
-                </div>
-
-                <div class="recipe-card-card"> 
-                  <img class="recipe-card" src="../svgpics/recipecardall.png">
-                  <div class="recipe-text">
-                      sjvnsnvshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhvjhvjdndgbndbdbdfbdfbdhsfbdgnfgnsndfnnnsdddddddddddddddddddddddddddddddddddddddddd
-                  </div>
-                </div>
-
+                {{/each}}
             </div>
         </section>
-
+        {{!-- This is the implemention of the new shelf being generated --}}
+        {{!-- <section>{{> allrecipes-part}}</section> --}}
     </section>
 
         <script src="" async defer></script>
     </body>
+
+  <script src="./js/recipe.js"></script>
+
 </html>
