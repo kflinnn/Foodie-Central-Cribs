@@ -5,7 +5,7 @@
               <nav>
                 <ul>
                   <li><a href="#">Hub</a></li>
-                  <li><a href="#">FoodieCentral</a></li>
+                  <li><a id="project1" href="#">FoodieCentral</a></li>
                   <li><a href="#">FoodieCentral At Home</a></li>
                   <li><i id= 'logout' class="fa fa-sign-in" aria-hidden="true"></i></li>
                 </ul>
@@ -19,20 +19,20 @@
         <div class="login">
           <h3>Login!</h3>
           <div>
-          <label for="login-username"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" id="username-login"/>
+          <label for="username-login"><b>Username</b></label>
+          <input type="text" name="name" placeholder="Enter Username" id="username-login"/>
           </div>
       <br/>
 <div>
-          <label for="login-password"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password"  id="password-login"/>
+          <label for="password-login"><b>Password</b></label>
+          <input type="password" name="name" placeholder="Enter Password"  id="password-login"/>
         </div>
           <button type="submit" id="login-btn">Login</button>
           <br/>
           <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
-          <form>
+          </form>
 
         </div>
     <form class="form signup-form">
@@ -48,9 +48,10 @@
           <label for="signup-password"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" id="signup-password-input" >
         </div>
-          <button type="submit" class="signup-btn">SignUp</button>
+          <button type="submit" id="signup-btn">SignUp</button>
         </div>
-        <form>
+        </form>
         </div>
+        <form action=""></form>
         
         <script src="./js/login.js" ></script>
