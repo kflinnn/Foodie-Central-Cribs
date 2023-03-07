@@ -1,17 +1,19 @@
-<section class="shelf-con"> 
-    <div><img class="single-shelf" src="css/svgpics/Single-Shelf-Final.png"/></div>
-    {{#if recipes.length}}
-    <div class="recipe-card-con">
-        {{#each recipes as |recipe|}}
-        <div class="recipe-card-card"> 
-            <img class="recipe-card" src="css/svgpics/recipecardall.png">
-            <div class="recipe-text">
+<section class='shelf-con'>
+  <div><img
+      class='single-shelf'
+      src='css/svgpics/Single-Shelf-Final.png'
+    /></div>
+  {{#if recipes.length}}
+    <div class='recipe-card-con'>
+      {{#each recipes as |recipe|}}
+        <div class='recipe-card-card'>
+          <img class='recipe-card' src='css/svgpics/recipecardall.png' />
+          <div class='recipe-text'>
             <h2>{{title}}</h2>
             <p>{{description}}</p>
-            </div>
+          </div>
         </div>
-        {{/each}}
+      {{/each}}
     </div>
-    {{/if}}
-    <button 
+  {{/if}}
 </section>
