@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "animate.css": "^4.1.1",
     "argon2": "^0.30.3",
     "connect-session-sequelize": "^7.0.4",
