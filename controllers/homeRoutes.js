@@ -2,30 +2,32 @@ const router = require('express').Router();
 const { Recipe, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/all-recipe', async (req, res) => {
-  try {
-    // Get all recipes and JOIN with user data
-    const recipeData = await Recipe.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['user_id'],
-        },
-      ],
-    });
 
-    // Serialize data so the template can read it
-    const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
+//I don't think we need this code..i don't think it's doing anything, but I could be wrong. Maybe it's for a different view than all recipes.
+// router.get('/all-recipe', async (req, res) => {
+//   try {
+//     // Get all recipes and JOIN with user data
+//     const recipeData = await Recipe.findAll({
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['user_id'],
+//         },
+//       ],
+//     });
 
-    // Pass serialized data and session flag into template
-    res.render('allRecipes-details', {
-      recipes,
-      logged_in: req.session.logged_in
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     // Serialize data so the template can read it
+//     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
+
+//     // Pass serialized data and session flag into template
+//     res.render('allRecipes-details', {
+//       recipes,
+//       logged_in: req.session.logged_in
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 router.get('/recipe/:id', async (req, res) => {
   try {
