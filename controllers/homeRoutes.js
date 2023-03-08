@@ -2,9 +2,9 @@ const router = require('express').Router();
 const { Recipe, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/all-recipe', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
+    // Get all recipes and JOIN with user data
     const recipeData = await Recipe.findAll({
       include: [
         {
@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', {
+    res.render('allRecipes-details', {
       recipes,
       logged_in: req.session.logged_in
     });
@@ -33,14 +33,14 @@ router.get('/recipe/:id', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['user_name'],
         },
       ],
     });
 
     const recipe = recipeData.get({ plain: true });
 
-    res.render('recipe', {
+    res.render('selectedRecipe', {
       ...recipe,
       logged_in: req.session.logged_in
     });
@@ -109,7 +109,7 @@ router.get('/all-recipes', withAuth, async (req, res) => {
   }
 });
 
-router.get('/login', (req, res) => {
+router.get('/', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/profile');
