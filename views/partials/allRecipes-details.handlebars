@@ -3,15 +3,17 @@
       class='single-shelf'
       src='/css/svgpics/Single-Shelf-Final.png'
     /></div>
+
   {{#if recipes.length}}
     <div class='recipe-card-con'>
       {{#each recipes as |recipe|}}
-        <div class='recipe-card-card'>
-          <img id="select-recipe" class='recipe-card' src='/css/svgpics/recipecardall.png' />
+        <div id='select-recipe' class='recipe-card-card'>
+          <img class='recipe-card' src='/css/svgpics/recipecardall.png' />
           <div class='recipe-text'>
-            <h2>{{title}}</h2>
-            <h3>{{user_name}}</h3>
-            <p>{{description}}</p>
+            <h2>{{recipe.title}}</h2>
+            <h3>{{recipe.user_name}}</h3>
+            <p>{{recipe.description}}</p>
+            {{recipe.id}}
           </div>
         </div>
       {{/each}}

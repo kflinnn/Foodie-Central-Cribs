@@ -106,4 +106,10 @@ body {
     animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
     animation-duration: 5s; /* don't forget to set a duration! */
 }
+.recipe-text h2 {
+  font-size: 1.5rem;
+}
+.recipe-text p {
+  font-size: 1rem;
+}
   /* rec card end */
