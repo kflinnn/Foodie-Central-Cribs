@@ -213,3 +213,17 @@ max-width: 700;
   border:solid 3px black;
   color:#2c817b;
 }
+
+/* this is profile-details btn  */
+.create-recipe-btn{
+  display:block;
+  position: absolute;
+  width: 8rem;
+  padding: .4rem;
+  left: 70.5rem;
+  top: 29rem;
+}
+
+@media screen and (max-width: 1548px) {
+
+}
