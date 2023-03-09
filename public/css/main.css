@@ -218,12 +218,27 @@ max-width: 700;
 
 /* this is profile-details btn  */
 .create-recipe-btn{
-  display:block;
   position: absolute;
+  flex-flow: column-reverse;
+  flex-direction: column-reverse;
   width: 8rem;
   padding: .4rem;
-  left: 70.5rem;
-  top: 29rem;
+  right: 0.6rem;
+  top: 6rem;
+  font-family: 'Patrick Hand', cursive;
+  font-weight: bolder;
+  color:#ed335c;
+  letter-spacing: .2rem;
+  background-color:rgba(255,255,255, 0.7);
+  border-radius: 4%;
+  border: #ccc solid 1px;
+}
+
+#logout {
+  color:#308684;
+  background-color:rgba(255,255,255, 0.7);
+  border-radius: 4%;
+  border: #ccc solid 1px;
 }
 
 @media screen and (max-width: 1548px) {
