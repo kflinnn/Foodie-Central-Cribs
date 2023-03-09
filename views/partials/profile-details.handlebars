@@ -7,7 +7,11 @@
     <div class='recipe-card-con'>
       {{#each recipes as |recipe|}}
         <div class='recipe-card-card'>
-          <img id="select-recipe" class='recipe-card' src='css/svgpics/recipecardall.png' />
+          <img
+            id='select-recipe'
+            class='recipe-card'
+            src='css/svgpics/recipecardall.png'
+          />
           <div class='recipe-text'>
             <h2>{{title}}</h2>
             <p>{{description}}</p>
@@ -15,7 +19,7 @@
         </div>
       {{/each}}
     </div>
-    {{else}}
-{{/if}}
-<button id= 'create-recipe-btn' class='create-recipe-btn'>Create Recipe</button>
+  {{else}}
+  {{/if}}
+  <button id='create-recipe-btn' class='create-recipe-btn'>Create Recipe</button>
 </section>
