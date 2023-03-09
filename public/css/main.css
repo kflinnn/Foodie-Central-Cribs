@@ -69,7 +69,6 @@
     text-align: left;
   }
   nav {
-    float: right;
     width: 100%;
   }
   
@@ -200,6 +199,9 @@ max-width: 700;
   }
 }
 
+.fa {
+  margin-right: 1rem;
+}
 
 /* recipe page */
 
