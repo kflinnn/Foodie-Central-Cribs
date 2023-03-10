@@ -6,17 +6,17 @@
   {{#if recipes.length}}
     <div class='recipe-card-con'>
       {{#each recipes as |recipe|}}
-        <div class='recipe-card-card'>
-          <img
-            id='select-recipe'
-            class='recipe-card'
-            src='css/svgpics/recipecardall.png'
-          />
-          <div class='recipe-text'>
-            <h2>{{title}}</h2>
-            <p>{{description}}</p>
-          </div>
-        </div>
+        <a href='/recipe/{{recipe.id}}'><div class='recipe-card-card'>
+            <img
+              id='select-recipe'
+              class='recipe-card'
+              src='css/svgpics/recipecardall.png'
+            />
+            <div class='recipe-text'>
+              <h2>{{title}}</h2>
+              <p>{{description}}</p>
+            </div>
+          </div></a>
       {{/each}}
     </div>
   {{else}}
