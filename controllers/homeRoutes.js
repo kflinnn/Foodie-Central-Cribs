@@ -24,7 +24,7 @@ router.get('/recipe/:id', async (req, res) => {
 });
 
 
-// Use withAuth middleware to prevent access to route
+// Use withAuth middleware to prevent access to route to display user's profile
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
@@ -44,7 +44,7 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
-// Use withAuth middleware to prevent access to route
+// Use withAuth middleware to prevent access to route to display createRecipes.handlebars
 router.get('/create-recipe', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
@@ -91,6 +91,8 @@ router.get('/all-recipes', async (req, res) => {
   }
 });
 
+
+//Original attempt at allRecipe route just in case we need it 
 // // Use withAuth middleware to prevent access to route
 // router.get('/all-recipes', withAuth, async (req, res) => {
 //   try {
@@ -110,6 +112,8 @@ router.get('/all-recipes', async (req, res) => {
 //   }
 // });
 
+
+//renders the homepage view
 router.get('/', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
