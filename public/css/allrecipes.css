@@ -113,3 +113,13 @@ body {
   font-size: 1rem;
 }
   /* rec card end */
+
+.form-input {
+  position: relative;
+  max-width: 500px;
+  margin:.4rem;
+  display:flex;
+}
+.form-group {
+align-items:flex-start;
+}

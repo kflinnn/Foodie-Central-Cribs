@@ -5,24 +5,25 @@ const withAuth = require('../utils/auth');
 //GET selected recipe details
 router.get('/recipe/:id', async (req, res) => {
   try {
-      // Find the logged in user based on the session ID
-      const userData = await User.findByPk(req.session.user_id, {
-        attributes: { exclude: ['password'] },
-        include: [{ model: Recipe }],
-      });
-  
-      const user = userData.get({ plain: true });
-  
-      res.render('selectedRecipe', {
-        ...user,
-        logged_in: true
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
+    // Find the logged in user based on the session ID
+    const recipeData = await Recipe.findOne({ where: { id: req.params.id } }, {
+      attributes: { exclude: ['password'] },
+    });
 
-   
+    // const user = userData.get({ plain: true });
+    const recipe = recipeData.get({ plain: true });
+    console.log(recipeData)
+    res.render('selectedRecipe', {
+      ...recipe,
+      logged_in: true
+    });
+  } catch (err) {
+    console.log(err)
+    res.status(500).json(err);
+  }
+});
+
+
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
@@ -67,15 +68,14 @@ router.get('/create-recipe', withAuth, async (req, res) => {
 router.get('/all-recipes', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
+    const recipeData = await Recipe.findAll(req.body, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Recipe }],
     });
 
-    const user = userData.get({ plain: true });
+    const recipe = recipeData.get({ plain: true });
 
     res.render('allRecipes', {
-      ...user,
+      ...recipe,
       logged_in: true
     });
   } catch (err) {
