@@ -64,24 +64,51 @@ router.get('/create-recipe', withAuth, async (req, res) => {
   }
 });
 
-// Use withAuth middleware to prevent access to route
-router.get('/all-recipes', withAuth, async (req, res) => {
+
+//GET route to show all recipes and display on allRecipe handlebar
+router.get('/all-recipes', async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
-    const recipeData = await Recipe.findAll(req.body, {
-      attributes: { exclude: ['password'] },
+    // Get all projects and JOIN with user data
+    const recipeData = await Recipe.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['user_name'],
+        },
+      ],
     });
 
-    const recipe = recipeData.get({ plain: true });
+    // Serialize data so the template can read it
+    const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
 
-    res.render('allRecipes', {
-      ...recipe,
-      logged_in: true
+    // Pass serialized data and session flag into template
+    res.render('allRecipes', { 
+      recipes, 
+      logged_in: req.session.logged_in 
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+// // Use withAuth middleware to prevent access to route
+// router.get('/all-recipes', withAuth, async (req, res) => {
+//   try {
+//     // Find the logged in user based on the session ID
+//     const recipeData = await Recipe.findAll(req.body, {
+//       attributes: { exclude: ['password'] },
+//     });
+
+//     const recipe = recipeData.get({ plain: true });
+
+//     res.render('allRecipes', {
+//       ...recipe,
+//       logged_in: true
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 router.get('/', (req, res) => {
   // If the user is already logged in, redirect the request to another route
