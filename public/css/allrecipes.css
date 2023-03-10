@@ -123,3 +123,131 @@ body {
 .form-group {
 align-items:flex-start;
 }
+
+/* all recipes styling */
+.textall {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -1.8rem;
+  padding: 1rem;
+  text-align: center;
+  justify-content: center;
+}
+.textall h2{
+
+  font-size: 1.2rem;
+  width:100%;
+  height: 70%;
+  margin-bottom: -.3rem;
+}
+.textall p {
+  font-size: 1rem;
+  width:100%;
+  height: 70%;
+}
+@media screen and (max-width: 550px) {
+  .recipe-text h2 {
+    font-size: 1.2rem;
+  }
+  .recipe-text p {
+    font-size:1rem ;
+  }
+  .textall h2 {
+    font-size: 1.2rem;
+  }
+  .textall p {
+    font-size:1rem ;
+  }
+}
+@media screen and (max-width: 416px) {
+  .recipe-text h2 {
+    font-size: 1rem;
+  }
+  .recipe-text p {
+    font-size:.8rem ;
+  }
+  .textall h2 {
+    font-size: 1.2rem;
+  }
+  .textall p {
+    font-size:1rem ;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .textall{
+    margin-left: -.5rem;
+  }
+  .textall h2 {
+    width:70%;
+    height: 70%;
+  }
+  .textall p {
+    width:80%;
+    height: 70%;
+  }  
+}
+@media screen and (max-width: 1200px) {
+  .textall{
+    margin-left: -2rem;
+    position: absolute;
+    flex-wrap: wrap;
+  }
+  .textall h2 {
+    width:70%;
+    height: 70%;
+  }
+  .textall p {
+    width:80%;
+    height: 70%;
+  }  
+}
+@media screen and (max-width: 1035px) {
+  .textall h2{
+    margin-left:-2rem;
+  }
+  .textall p{
+  visibility: hidden;
+  }  
+}
+@media screen and (max-width: 900) {
+  body{
+    width:100%;
+    height:100%;
+  }
+  .textall h2{
+    width:50%;
+    flex-wrap: wrap;
+  }
+  .textall p{
+    visibility: none;
+    } 
+  .single-shelf {
+    visibility: none;
+  }
+  .recipe-card-con{
+    flex-wrap: wrap;
+    flex-direction: row;
+    width:100%;
+    height:100%;
+  }
+}
+@media screen and (max-width:866px){
+  .recipe-card-con {
+    margin:-4rem
+  }
+  .textall {
+    width: 50%;
+  }
+  .textall h2{
+    font-size: .8rem;
+    width: 100%;
+    padding:0;
+    flex-wrap: wrap;
+  }
+  .shelf-con{
+    margin-top: 5rem;
+  }
+  .single-shelf {
+    visibility: hidden;
+  }
+}

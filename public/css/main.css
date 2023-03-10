@@ -219,8 +219,7 @@ max-width: 700;
 /* this is profile-details btn  */
 .create-recipe-btn{
   position: absolute;
-  flex-flow: column-reverse;
-  flex-direction: column-reverse;
+  flex-wrap: wrap;
   width: 8rem;
   padding: .4rem;
   right: 0.6rem;
@@ -248,6 +247,35 @@ font-size: 1.2rem;
 font-size: 1.1rem;
 margin-top: 2rem;
 }
-@media screen and (max-width: 1548px) {
+@media screen and (max-width: 440px) {
+  .create-recipe-btn{
+    position: relative;
+    width: 50%;
+    top:auto;
+    justify-content: center;
+    margin:auto
+  }
+}
 
+@media screen and (max-width: 840px) {
+  .create-recipe-btn{
+    position: relative;
+    width: 50%;
+    top:auto;
+    justify-content: center;
+    margin:auto
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .create-recipe-btn{
+    position: relative;
+    width: 100%;
+    top:auto;
+    justify-content: center;
+    margin-bottom:5rem;
+  }
+  .container2{
+    align-items: center;
+  }
 }
