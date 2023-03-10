@@ -91,28 +91,6 @@ router.get('/all-recipes', async (req, res) => {
   }
 });
 
-
-//Original attempt at allRecipe route just in case we need it 
-// // Use withAuth middleware to prevent access to route
-// router.get('/all-recipes', withAuth, async (req, res) => {
-//   try {
-//     // Find the logged in user based on the session ID
-//     const recipeData = await Recipe.findAll(req.body, {
-//       attributes: { exclude: ['password'] },
-//     });
-
-//     const recipe = recipeData.get({ plain: true });
-
-//     res.render('allRecipes', {
-//       ...recipe,
-//       logged_in: true
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
-
 //renders the homepage view
 router.get('/', (req, res) => {
   // If the user is already logged in, redirect the request to another route
