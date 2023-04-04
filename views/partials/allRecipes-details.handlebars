@@ -1,12 +1,12 @@
 <button id='create-recipe-btn' class='create-recipe-btn'>Create Recipe</button>
 <section class='shelf-con'>
-  <div><img
-      class='single-shelf'
-      src='css/svgpics/Single-Shelf-Final.png'
-    /></div>
   {{#if recipes.length}}
-    <div class='recipe-card-con'>
-      {{#each recipes as |recipe|}}
+    {{#each recipes as |recipe|}}
+      <div><img
+          class='single-shelf'
+          src='css/svgpics/Single-Shelf-Final.png'
+        /></div>
+      <div class='recipe-card-con'>
         <a href='/recipe/{{recipe.id}}'><div class='recipe-card-card'>
             <img
               id='select-recipe'
@@ -18,9 +18,9 @@
               <p>{{description}}</p>
             </div>
           </div></a>
-      {{/each}}
-    </div>
+      </div>
+
+    {{/each}}
   {{else}}
   {{/if}}
-
 </section>
